@@ -3,7 +3,7 @@
         <template v-slot:title="{ content }">{{ content ? `${content}` : `DMCI Aston for sale | pasay condo for sale | dmci project for sale ` }}</template>
     </metainfo>
 
-    <div :class="myTheme" class="flex flex-col items-stretch min-h-screen">
+    <div :class="myTheme" class="flex flex-col items-stretch min-h-screen" v-cloak>
         <TheNavigation @change="myTheme = $event"></TheNavigation>
 
         <div class="flex-1 dark:bg-gray-800">

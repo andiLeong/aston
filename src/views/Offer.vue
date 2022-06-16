@@ -1,30 +1,81 @@
 <template>
 
-    offer
-    <main class="my-28 mx-auto max-w-7xl px-4 sm:px-6 ">
-        <div class="lg:grid lg:grid-cols-12 lg:gap-8">
-            <div class="sm:text-center md:max-w-2xl md:mx-auto lg:col-span-6 lg:text-left">
-                <h1>
-                    <span
-                        class="block text-sm font-semibold uppercase tracking-wide text-gray-500 sm:text-base lg:text-sm xl:text-base">Turn Over in 2 Years</span>
-                    <span class="mt-1 block text-4xl tracking-tight font-extrabold sm:text-5xl xl:text-6xl">
-                          <span class="block text-gray-900 dark:text-white">Connect your city lifer Now</span>
-                          <span class="block text-sky-600">The ASTON Place</span>
-                    </span>
-                </h1>
-                <p class="mt-3 text-base text-gray-500 dark:text-gray-100 sm:mt-5 sm:text-xl lg:text-lg xl:text-xl">Turning over in 2024,
-                    The Aston Place is the perfect choice if you looking for a convenient and well-balanced lifestyle.
-                    This high rise condo located Dominga St., Pasay City, offering you options to connect to business districts, shopping malls, distinguished schools and other key areas.
-               </p>
+  <div class="relative bg-white pt-16 pb-32 overflow-hidden dark:bg-gray-800">
+    <div class="relative">
+      <div class="lg:mx-auto lg:max-w-7xl lg:px-8 lg:grid lg:grid-cols-2 lg:grid-flow-col-dense lg:gap-24">
+        <div class="px-4 max-w-xl mx-auto sm:px-6 lg:py-16 lg:max-w-none lg:mx-0 lg:px-0">
+            <div class="mt-6">
+              <h2 class="text-3xl font-extrabold tracking-tight text-gray-900 dark:text-gray-200">Great things comes to those who discover</h2>
+
+
+              <div v-for="skill in skills" :key="skill" class="flex items-center space-y-1 mt-4">
+                <div class="mr-2">
+                  <svg class="h-6 w-6 text-sky-400" xmlns="http://www.w3.org/2000/svg"
+                       fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"
+                       aria-hidden="true">
+                    <path stroke-linecap="round" stroke-linejoin="round"
+                          d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                  </svg>
+                </div>
+                <div class="dark:text-gray-100 text-lg text-gray-500">{{ skill }}</div>
+              </div>
+              <div class="mt-6">
+                <button @click.prvent="scrollMeTo" class="inline-flex px-4 py-2 border border-transparent text-base font-medium rounded-md shadow-sm text-white bg-sky-600 hover:bg-sky-700">Contact Now</button>
+              </div>
             </div>
-            <div
-                class="mt-12 relative sm:max-w-lg sm:mx-auto lg:mt-0 lg:max-w-none lg:mx-0 lg:col-span-6 lg:flex lg:items-center">
-                <iframe class="w-full h-80"
-                        src="https://www.youtube.com/embed/1mjEJQjW84c" frameborder="0" allowfullscreen>
-                </iframe>
-            </div>
+
         </div>
-    </main>
+        <div class="mt-12 sm:mt-16 lg:mt-0">
+          <div class="pl-4 -mr-48 sm:pl-6 md:-mr-16 lg:px-0 lg:m-0 lg:relative lg:h-full">
+            <img class="w-full rounded-xl shadow-xl ring-1 ring-black ring-opacity-5 lg:absolute lg:left-0 lg:h-full lg:w-auto lg:max-w-none" src="https://andiliang.sgp1.digitaloceanspaces.com/aston/E8AF825C-AE4C-4040-9184-05992D573C5D.jpeg" alt="DMCI Aston inner D layout">
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="mt-24">
+      <div class="lg:mx-auto lg:max-w-7xl lg:px-8 lg:grid lg:grid-cols-2 lg:grid-flow-col-dense lg:gap-24">
+        <div class="px-4 max-w-xl mx-auto sm:px-6 lg:py-32 lg:max-w-none lg:mx-0 lg:px-0 lg:col-start-2">
+          <div>
+            <div class="mt-6">
+              <h2 class="text-3xl font-extrabold tracking-tight text-gray-900 dark:text-gray-200">This what you get from DMCI</h2>
+              <p class="mt-4 text-lg text-gray-500 dark:text-gray-100">
+                Turning over in 2024, currently the same layout unit from dmci is selling 8.5m total plus the closing fee, it probably gets higher in future .
+                If you purchase from us, you only pay 7m with flexible payment scheme.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="mt-12 sm:mt-16 lg:mt-0 lg:col-start-1">
+          <div class="pr-4 -ml-48 sm:pr-6 md:-ml-16 lg:px-0 lg:m-0 lg:relative lg:h-full">
+            <img class="w-full rounded-xl shadow-xl ring-1 ring-black ring-opacity-5 lg:absolute lg:right-0 lg:h-full lg:w-auto lg:max-w-none" src="https://andiliang.sgp1.digitaloceanspaces.com/aston/aston8.5m.PNG" alt="Customer profile user interface">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="bg-gray-50 dark:bg-gray-700" id="contact" ref="something">
+    <div class="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:py-16 lg:px-8 lg:flex lg:items-center lg:justify-between">
+      <h2 class="text-3xl font-extrabold tracking-tight text-gray-900 sm:text-4xl">
+        <span class="block dark:text-gray-100">Convince ?</span>
+        <span class="block text-sky-600">Let's talk now</span>
+      </h2>
+      <div class="mt-8 flex lg:mt-0 lg:flex-shrink-0">
+        <div class="inline-flex rounded-md shadow">
+          <a href="https://wa.me/60132204523" class="inline-flex items-center justify-center px-5 py-3 border border-transparent text-base font-medium rounded-md text-white bg-green-600 hover:bg-green-700"> Whatsapp Me </a>
+        </div>
+        <div class="ml-3 inline-flex rounded-md shadow">
+          <button @click.prevent="viberNumber = !viberNumber" class="inline-flex items-center justify-center px-5 py-3 border border-transparent text-base font-medium rounded-md text-purple-600 bg-white hover:bg-purple-50">
+            {{
+            !viberNumber
+            ? 'Viber Me'
+            : '09272714285'
+                }}
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
 
 
 
@@ -37,29 +88,24 @@ import {ref} from "vue";
 import {useMeta} from "vue-meta";
 
 useMeta({
-    title: 'dmci aston for sale | pasay high rise condo for sale | why aston to buy',
+    title: 'dmci aston for sale | pasay high rise condo for sale | 2br aston 7m only',
     description: 'aston is one of the high rise condo from dmci, why you should buy it , it connects you to to business districts, shopping malls, distinguished schools, hospitals and other convenient key area',
     htmlAttrs: { lang: 'en', amp: true }
 })
 
-const facilities = ref([
-    {name:'Kiddie Pool', url: 'https://andiliang.sgp1.digitaloceanspaces.com/aston/The%20Aston%20Place-Kiddie%20Pool-small.jpg'},
-    {name:'Lap Pool', url: 'https://andiliang.sgp1.digitaloceanspaces.com/aston/The%20Aston%20Place-Lap%20Pool-small.jpg'},
-    {name:'Leisure Pool', url: 'https://andiliang.sgp1.digitaloceanspaces.com/aston/The%20Aston%20Place-Leisure%20Pool-small.jpg'},
-    {name:'Lounge Area', url: 'https://andiliang.sgp1.digitaloceanspaces.com/aston/The%20Aston%20Place-Lounge%20Area-small.jpg'},
-    {name:'Sky Patio', url: 'https://andiliang.sgp1.digitaloceanspaces.com/aston/The%20Aston%20Place-Sky%20Patio-small.jpg'},
-    {name:'Amenity Area', url: 'https://andiliang.sgp1.digitaloceanspaces.com/aston/The%20Aston%20Place-Amenity%20Area-small.jpg'},
-    {name:'Drop off', url: 'https://andiliang.sgp1.digitaloceanspaces.com/aston/The%20Aston%20Place-Drop-off-small.jpg'},
-    {name:'Atrium', url: 'https://andiliang.sgp1.digitaloceanspaces.com/aston/The%20Aston%20Place-Atrium-small.jpg'},
-    {name:'Sky Promenade', url: 'https://andiliang.sgp1.digitaloceanspaces.com/aston/The%20Aston%20Place-Sky%20Promenade-small.jpg'},
-]);
+const something = ref()
+const skills = ref([
+  '100% clear ownership',
+  'You pay what we say',
+  'one to one to owner',
+  'no property broker/agent',
+  '2br 54sq with balcony 7M',
+  'include everything',
+])
+function scrollMeTo() {
+  var top = something.value.offsetTop;
 
-const siteProgress = ref([
-    {month:'May', percentage:'32.6%', url: 'https://andiliang.sgp1.digitaloceanspaces.com/aston/The%20Aston%20Place-site-progress-data-may-large.jpg'},
-    {month:'April', percentage:'31.28%', url: 'https://andiliang.sgp1.digitaloceanspaces.com/aston/The%20Aston%20Place-site-progress-data-april-large.png'},
-    {month:'March', percentage:'28.11%', url: 'https://andiliang.sgp1.digitaloceanspaces.com/aston/The%20Aston%20Place-site-progress-data-march-large.jpg'},
-    {month:'February', percentage:'25.56%', url: 'https://andiliang.sgp1.digitaloceanspaces.com/aston/The%20Aston%20Place-site-progress-data-feberary-large.jpg'},
-    {month:'January', percentage:'24.39%', url: 'https://andiliang.sgp1.digitaloceanspaces.com/aston/The%20Aston%20Place-site-progress-data-janarary-large.jpg'},
-
-]);
+  window.scrollTo(0, top);
+}
+const viberNumber = ref(false)
 </script>

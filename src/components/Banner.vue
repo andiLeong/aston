@@ -1,6 +1,6 @@
 <template>
 
-  <div v-if="open" class="relative bg-sky-600">
+  <div v-if="open" class="relative bg-sky-600" v-cloak>
     <div class="max-w-7xl mx-auto py-3 px-3 sm:px-6 lg:px-8">
       <div class="pr-16 sm:text-center sm:px-16">
         <p class="font-medium text-white">
@@ -30,7 +30,3 @@ import {ref} from "vue";
 
 const open = ref(true)
 </script>
-
-<style scoped>
-
-</style>
