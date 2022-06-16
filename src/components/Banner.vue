@@ -1,13 +1,13 @@
 <template>
 
-  <div v-if="open" class="relative bg-sky-600" v-cloak>
+  <div v-if="open" class="relative bg-gradient-to-r from-purple-300 to-sky-500" v-cloak>
     <div class="max-w-7xl mx-auto py-3 px-3 sm:px-6 lg:px-8">
       <div class="pr-16 sm:text-center sm:px-16">
         <p class="font-medium text-white">
           <span class="md:hidden"> DMCI Ason for sale! </span>
           <span class="hidden md:inline"> Big news! We're selling aston unit for inexpensive price. </span>
           <span class="block sm:ml-2 sm:inline-block">
-          <AppLink to="/offer" class="text-white font-bold underline"> Learn more <span aria-hidden="true">&rarr;</span></AppLink>
+          <AppLink active-class="" to="/offer" class="text-white font-bold underline"> Learn more <span aria-hidden="true">&rarr;</span></AppLink>
         </span>
         </p>
       </div>

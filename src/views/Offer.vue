@@ -20,7 +20,7 @@
                 <div class="dark:text-gray-100 text-lg text-gray-500">{{ skill }}</div>
               </div>
               <div class="mt-6">
-                <button @click.prvent="scrollMeTo" class="inline-flex px-4 py-2 border border-transparent text-base font-medium rounded-md shadow-sm text-white bg-sky-600 hover:bg-sky-700">Contact Now</button>
+                <button @click.prvent="contact.scrollIntoView({behavior:'smooth'})" class="inline-flex px-4 py-2 text-base font-medium rounded-md shadow-sm text-white bg-gradient-to-r from-purple-300 to-sky-500 hover:bg-sky-700">Contact Now</button>
               </div>
             </div>
 
@@ -54,7 +54,7 @@
     </div>
   </div>
 
-  <div class="bg-gray-50 dark:bg-gray-700" id="contact" ref="something">
+  <div class="bg-gray-50 dark:bg-gray-700" id="contact" ref="contact">
     <div class="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:py-16 lg:px-8 lg:flex lg:items-center lg:justify-between">
       <h2 class="text-3xl font-extrabold tracking-tight text-gray-900 sm:text-4xl">
         <span class="block dark:text-gray-100">Convince ?</span>
@@ -65,7 +65,7 @@
           <a href="https://wa.me/60132204523" class="inline-flex items-center justify-center px-5 py-3 border border-transparent text-base font-medium rounded-md text-white bg-green-600 hover:bg-green-700"> Whatsapp Me </a>
         </div>
         <div class="ml-3 inline-flex rounded-md shadow">
-          <button @click.prevent="viberNumber = !viberNumber" class="inline-flex items-center justify-center px-5 py-3 border border-transparent text-base font-medium rounded-md text-purple-600 bg-white hover:bg-purple-50">
+          <button @click.prevent="viberNumber = !viberNumber" class="inline-flex items-center justify-center px-5 py-3 border border-transparent text-base font-medium rounded-md text-indigo-600 bg-white hover:bg-indigo-50">
             {{
             !viberNumber
             ? 'Viber Me'
@@ -88,12 +88,12 @@ import {ref} from "vue";
 import {useMeta} from "vue-meta";
 
 useMeta({
-    title: 'dmci aston for sale | pasay high rise condo for sale | 2br aston 7m only',
-    description: 'aston is one of the high rise condo from dmci, why you should buy it , it connects you to to business districts, shopping malls, distinguished schools, hospitals and other convenient key area',
+    title: 'DMCI Aston for sale | pasay high rise condo for sale | 2br aston 7m only',
+    description: 'aston is one of the high rise condo from DMCI, why you should buy it , it connects you to to business districts, shopping malls, distinguished schools, hospitals and other convenient key area',
     htmlAttrs: { lang: 'en', amp: true }
 })
 
-const something = ref()
+const contact = ref()
 const skills = ref([
   '100% clear ownership',
   'You pay what we say',
@@ -102,10 +102,6 @@ const skills = ref([
   '2br 54sq with balcony 7M',
   'include everything',
 ])
-function scrollMeTo() {
-  var top = something.value.offsetTop;
 
-  window.scrollTo(0, top);
-}
 const viberNumber = ref(false)
 </script>
