@@ -18,8 +18,8 @@
                 </a>
 
             </div>
-            <div class="mt-8 md:mt-0 md:order-1">
-                <p class="text-center text-base text-gray-400">&copy; {{year}} Workflow, Inc. All rights reserved.</p>
+            <div class="mt-8 md:mt-0 md:order-1 hidden">
+                <p class="text-center text-base text-gray-400">&copy; 2022 - {{year}} </p>
             </div>
         </div>
     </footer>

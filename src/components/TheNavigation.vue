@@ -1,4 +1,6 @@
 <template>
+
+  <Banner />
   <Disclosure
     as="nav"
     class="bg-white shadow dark:bg-gray-700"
@@ -77,6 +79,7 @@ import TheMobileNavigation from '@/components/TheMobileNavigation.vue';
 import { ref } from 'vue';
 import Sun from "@/components/svg/Sun.vue";
 import Moon from "@/components/svg/Moon.vue";
+import Banner from "@/components/Banner.vue"
 import useCapitalise from "../composable/useCapitalise";
 import { useThemeStore } from '@/store/theme'
 const themeStore = useThemeStore()
