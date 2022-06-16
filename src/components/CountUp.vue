@@ -2,51 +2,34 @@
     <span v-text="count" v-observe-visibility="visibilityChanged"></span>
 </template>
 
-<script>
+
+<script setup>
+import {ref, watch} from "vue";
+
+const props = defineProps(['to'])
+const count = ref(0);
+const interval = ref(null);
+const increment = ref(Math.ceil(props.to / 20));
+const inView = ref(false);
 
 
-export default {
-    props: ['to'],
-
-    data() {
-        return {
-            count: 0,
-            interval: null,
-            inView: false
-        };
-    },
-
-    computed: {
-        increment() {
-            return Math.ceil(this.to / 30);
-        }
-    },
-
-    watch:{
-        inView(newValue){
-           if(newValue){
-               this.interval = setInterval(this.tick, 40);
-           }
-        }
-    },
-
-    methods: {
-        tick() {
-            if (this.count + this.increment >= this.to) {
-                this.count = this.to;
-
-                return clearInterval(this.interval);
-            }
-
-            this.count += this.increment;
-        },
-        visibilityChanged(inView) {
-            if(inView){
-                console.log('in view now')
-                this.inView = true
-            }
-
-        }
+watch(inView, newValue => {
+    if (newValue) {
+        interval.value = setInterval(() => start(), 40)
     }
-};
+})
+
+function start() {
+    if (increment.value + count.value >= props.to) {
+        count.value = props.to
+        return clearInterval(interval.value)
+    }
+    count.value += increment.value
+}
+
+function visibilityChanged(inViewNow) {
+    if (inViewNow) {
+        inView.value = true;
+    }
+}
 </script>
