@@ -26,7 +26,7 @@ useThemeStore().setLocalTheme(myTheme)
 useMeta({
     title: 'DMCI the best condo provider in the Philippines | DMCI Aston for sale |  dmci project for sale ',
     description: 'DMCI the best condo builder in the ph, it provide a variety of theme for condo, its location spreading the philippines.',
-    htmlAttrs: { lang: 'en', amp: true }
+    htmlAttrs: { lang: 'en' }
 })
 
 
