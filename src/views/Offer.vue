@@ -5,7 +5,7 @@
       <div class="lg:mx-auto lg:max-w-7xl lg:px-8 lg:grid lg:grid-cols-2 lg:grid-flow-col-dense lg:gap-24">
         <div class="px-4 max-w-xl mx-auto sm:px-6 lg:py-16 lg:max-w-none lg:mx-0 lg:px-0">
             <div class="mt-6">
-              <h2 class="text-3xl font-extrabold tracking-tight text-gray-900 dark:text-gray-200">Great things comes to those who discover</h2>
+              <h2 class="text-3xl font-extrabold tracking-tight text-gray-900 dark:text-gray-200">Save at least 2m on dmci aston, what a deal!</h2>
 
 
               <div v-for="skill in skills" :key="skill" class="flex items-center space-y-1 mt-4">
@@ -37,10 +37,10 @@
         <div class="px-4 max-w-xl mx-auto sm:px-6 lg:py-32 lg:max-w-none lg:mx-0 lg:px-0 lg:col-start-2">
           <div>
             <div class="mt-6">
-              <h2 class="text-3xl font-extrabold tracking-tight text-gray-900 dark:text-gray-200">This what you get from DMCI</h2>
+              <h2 class="text-3xl font-extrabold tracking-tight text-gray-900 dark:text-gray-200">Currently DMCI selling this at 8.5m the same type of unit</h2>
               <p class="mt-4 text-lg text-gray-500 dark:text-gray-100">
                 Turning over in 2024, currently the same layout unit from dmci is selling 8.5m total plus the closing fee, it probably gets higher in future .
-                If you purchase from us, you only pay 7m with flexible payment scheme.
+                If you purchase from me, you only pay 6.3m with flexible payment scheme, you have to save st least 2m above, I dont earn much from you.
               </p>
             </div>
           </div>
@@ -88,19 +88,24 @@ import {ref} from "vue";
 import {useMeta} from "vue-meta";
 
 useMeta({
-    title: 'DMCI Aston for sale | pasay high rise condo for sale | 2br aston 7m only',
+    title: 'DMCI Aston for sale | pasay high rise condo for sale | 2br aston 6m only',
     description: 'aston is one of the high rise condo from DMCI, why you should buy it , it connects you to to business districts, shopping malls, distinguished schools, hospitals and other convenient key area',
     htmlAttrs: { lang: 'en', amp: true }
 })
 
 const contact = ref()
 const skills = ref([
+  'Same type unit from dmci is now 8.5m, and I\'m selling 6.3m',
   '100% clear ownership',
-  'You pay what we say',
   'one to one to owner',
   'no property broker/agent',
-  '2br 54sq with balcony 7M',
-  'include everything',
+  '2br with balcony 54 square meter',
+  'total selling price, 6.3m',
+  'Buyer cash out, 1,061,908  ',
+  'Then monthly payment 24,230.44 until 2024,July',
+  'Settle the remaining balance 6.1m including the closing fee on 2024,July ',
+  'turn over in 2024,july',
+  'include closing fee, admin fee',
 ])
 
 const viberNumber = ref(false)
