@@ -101,9 +101,9 @@ const skills = ref([
   'no property broker/agent',
   '2br with balcony 54 square meter',
   'total selling price, 6.3m',
-  'Buyer cash out, 1,061,908  ',
+  'Buyer cash out, 1,361,908  ',
   'Then monthly payment 24,230.44 until 2024,July',
-  'Settle the remaining balance 6.1m including the closing fee on 2024,July ',
+  'Settle the remaining balance 4.4m including the closing fee on 2024,July ',
   'turn over in 2024,july',
   'include closing fee, admin fee',
 ])
